@@ -14,7 +14,7 @@ function AddCustomer() {
     const customer = { name, email, phoneNumber };
 
     try {
-      const response = await fetch('http://localhost:8080/api/customers', {
+      const response = await fetch('crmbackend-production-388a.up.railway.app/api/customers', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

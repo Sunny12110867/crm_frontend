@@ -11,7 +11,7 @@ function ShowAllCampaign() {
   useEffect(() => {
     const fetchCampaigns = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/campaigns');
+        const response = await fetch('crmbackend-production-388a.up.railway.app/api/campaigns');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -29,7 +29,7 @@ function ShowAllCampaign() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/campaigns/${id}`, {
+      const response = await fetch(`crmbackend-production-388a.up.railway.app/api/campaigns/${id}`, {
         method: 'DELETE'
       });
       if (!response.ok) {

@@ -25,10 +25,10 @@ function CreateCampaign() {
 
   const handleCreateCampaign = async (event) => {
     event.preventDefault();
-    const campaign = { name, description, rules: JSON.stringify(rules) }; // Convert rules to JSON string
+    const campaign = { name, description, rules: JSON.stringify(rules) }; 
 
     try {
-      const response = await fetch('http://localhost:8080/api/campaigns', {
+      const response = await fetch('crmbackend-production-388a.up.railway.app/api/campaigns', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

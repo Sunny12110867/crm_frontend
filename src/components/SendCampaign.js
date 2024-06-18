@@ -13,7 +13,7 @@ function SendCampaign() {
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/customers');
+        const response = await fetch('crmbackend-production-388a.up.railway.app/api/customers');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -38,7 +38,7 @@ function SendCampaign() {
         sentAt: new Date().toISOString()
       };
 
-      const response = await fetch('http://localhost:8080/api/vendor/send', {
+      const response = await fetch('crmbackend-production-388a.up.railway.app/api/vendor/send', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

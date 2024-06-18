@@ -9,7 +9,7 @@ function Login() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLogin = async () => {
-    const response = await fetch(`http://localhost:8080/api/users/login?email=${email}&password=${password}`);
+    const response = await fetch(`crmbackend-production-388a.up.railway.app/api/users/login?email=${email}&password=${password}`);
     const isValid = await response.json();
     if (isValid) {
       setMessage('Login successful');

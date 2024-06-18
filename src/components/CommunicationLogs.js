@@ -11,7 +11,7 @@ function CommunicationLogs() {
   useEffect(() => {
     const fetchLogs = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/communications-logs/campaign/${campaignId}/logs`);
+        const response = await fetch(`crmbackend-production-388a.up.railway.app/api/communications-logs/campaign/${campaignId}/logs`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
