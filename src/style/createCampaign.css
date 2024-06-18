@@ -1,0 +1,101 @@
+.create-campaign-container {
+    padding: 20px;
+    width: 80%;
+    /* background: white; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    margin-top: 3cm;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.create-campaign-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+}
+
+.rules-section {
+    margin-bottom: 20px;
+}
+
+.rules-section h3 {
+    margin-bottom: 10px;
+}
+
+.rule {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.rule label {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.rule input {
+    
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.rule button {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.rule button:hover {
+    background-color: #d32f2f;
+}
+
+button[type="button"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+button[type="button"]:hover {
+    background-color: #45a049;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    /* color: white; */
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+    border-radius: 4px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
