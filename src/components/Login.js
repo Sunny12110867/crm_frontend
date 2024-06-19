@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../style/login.css';
 import { Link, Navigate } from 'react-router-dom';
 
-function Login() {
+function Login({ setUser }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
@@ -10,19 +10,19 @@ function Login() {
 
   const handleLogin = async () => {
     const response = await fetch(`https://crmbackend-production-fab8.up.railway.app/api/users/login?email=${email}&password=${password}`);
-    const isValid = await response.json();
-    if (isValid) {
+    const user = await response.json();
+    if (user) {
       setMessage('Login successful');
-      setIsLoggedIn(true); 
-      // setMessage('Invalid email or password');
-    }
-    else{
+      setIsLoggedIn(true);
+      setUser(user.name); // Set the username in the parent component
+      localStorage.setItem('user', JSON.stringify(user)); // Store user data in local storage
+    } else {
       setMessage('Invalid email or password');
     }
   };
 
   if (isLoggedIn) {
-    return <Navigate to="/" replace={true} />; 
+    return <Navigate to="/" replace={true} />;
   }
 
   return (
