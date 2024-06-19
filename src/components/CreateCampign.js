@@ -28,7 +28,7 @@ function CreateCampaign() {
     const campaign = { name, description, rules: JSON.stringify(rules) }; 
 
     try {
-      const response = await fetch('crmbackend-production-388a.up.railway.app/api/campaigns', {
+      const response = await fetch('https://crmbackend-production-fab8.up.railway.app/api/campaigns', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

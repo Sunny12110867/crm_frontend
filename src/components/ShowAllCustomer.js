@@ -9,7 +9,7 @@ function ShowAllCustomer() {
     useEffect(() => {
         const fetchCustomers = async () => {
             try {
-                const response = await fetch('crmbackend-production-388a.up.railway.app/api/customers');
+                const response = await fetch('https://crmbackend-production-fab8.up.railway.app/api/customers');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -27,7 +27,7 @@ function ShowAllCustomer() {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`crmbackend-production-388a.up.railway.app/api/customers/${id}`, {
+            const response = await fetch(`https://crmbackend-production-fab8.up.railway.app/api/customers/${id}`, {
                 method: 'DELETE'
             });
             if (!response.ok) {

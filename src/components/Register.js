@@ -9,7 +9,7 @@ function Register() {
   const [message, setMessage] = useState('');
 
   const handleRegister = async () => {
-    const response = await fetch('crmbackend-production-388a.up.railway.app/api/users', {
+    const response = await fetch('https://crmbackend-production-fab8.up.railway.app/api/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
