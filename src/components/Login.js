@@ -14,8 +14,8 @@ function Login({ setUser }) {
     if (user) {
       setMessage('Login successful');
       setIsLoggedIn(true);
-      setUser(user.name); // Set the username in the parent component
-      localStorage.setItem('user', JSON.stringify(user)); // Store user data in local storage
+      setUser(email);
+      localStorage.setItem('user', email); 
     } else {
       setMessage('Invalid email or password');
     }

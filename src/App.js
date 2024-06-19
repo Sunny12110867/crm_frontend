@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import './style/appStyle.css';
 
-function App() {
-  const [user, setUser] = useState(null);
+function App({ user, setUser }) { 
 
   useEffect(() => {
-    const storedUser = JSON.parse(localStorage.getItem('user'));
+    const storedUser = localStorage.getItem('user'); // Directly get the string
     if (storedUser) {
-      setUser(storedUser.name);
+      setUser(storedUser); // Set user state directly
     }
-  }, []);
+  }, [setUser]); // Include setUser in the dependency array
 
   return (
     <div className='complete_body'>
